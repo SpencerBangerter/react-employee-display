@@ -71,17 +71,18 @@
     },
     {
       "id": 11,
-      "name": "Peter Cleaner",
-      "title": "Sanitation Specialist",
-      "department": "CDC",
-      "currentlyEmployed": true
-    },
-    {
-      "id": 12,
       "name": "Sean King",
       "title": "QC Analyst",
       "department": "Quality Control",
       "currentlyEmployed": true
+    },
+    {
+        "id": 12,
+        "name": "Peter Cleaner",
+        "title": "Sanitation Specialist",
+        "department": "CDC",
+        "currentlyEmployed": true
     }
+  
   ]
   
