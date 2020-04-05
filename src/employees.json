@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "name": "Jonathan Bejarano",
+      "title": "Engineering Manager",
+      "department": "Engineering",
+     "currentlyEmployed": true
+    },
+    {
+      "id": 2,
+      "name": "Jason Heap",
+      "title": "Senior Developer",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 3,
+      "name": "Mason Short",
+      "title": "Software Developer II",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 4,
+      "name": "Khris Watters",
+      "title": "Software Developer II",
+      "department": "Engineering",
+      "currentlyEmployed": false
+    },
+    {
+      "id": 5,
+      "name": "Spencer Bangerter",
+      "title": "Junior Developer",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 6,
+      "name": "Thyago Volpatto",
+      "title": "Junior Developer",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 7,
+      "name": "Matthew Grimes",
+      "title": "Junior Developer",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 8,
+      "name": "Weston Meier",
+      "title": "Junior Developer",
+      "department": "Engineering",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 9,
+      "name": "Eric Hyun",
+      "title": "QC Manager",
+      "department": "Quality Control",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 10,
+      "name": "Dan DeGeere",
+      "title": "QC Analyst",
+      "department": "Quality Control",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 11,
+      "name": "Peter Cleaner",
+      "title": "Sanitation Specialist",
+      "department": "CDC",
+      "currentlyEmployed": true
+    },
+    {
+      "id": 12,
+      "name": "Sean King",
+      "title": "QC Analyst",
+      "department": "Quality Control",
+      "currentlyEmployed": true
+    }
+  ]
+  
