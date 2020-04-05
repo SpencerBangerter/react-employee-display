@@ -2,16 +2,16 @@ import React from "react";
 
 function EmployeeCard(props) {
   let renderedEmployees = props.employees
-  if (props.filters.currentlyEmployed) {
-    renderedEmployees = props.employees.filter(employee => employee.currentlyEmployed);
+  if (props.filters.currentlyEmployed || !props.filters.currentlyEmployed) {
+    renderedEmployees = renderedEmployees.filter(employee => employee.currentlyEmployed === props.filters.currentlyEmployed);
   }
   if (props.filters.department) {
-    renderedEmployees = props.employees.filter(employee => employee.department === props.filters.department);
+    renderedEmployees = renderedEmployees.filter(employee => employee.department === props.filters.department);
   }
   if (props.filters.title) {
-    renderedEmployees = props.employees.filter(employee => employee.title === props.filters.title);
+    renderedEmployees = renderedEmployees.filter(employee => employee.title === props.filters.title);
   }
-
+  console.log(renderedEmployees)
   return (
     <div>
       {renderedEmployees.map(employee => (

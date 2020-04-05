@@ -4,6 +4,8 @@ import Row from "./Row";
 import Col from "./Col";
 import Card from "./Card";
 import EmployeeCardBody from "./EmployeeCardBody";
+import FiltersCardBody from "./FiltersCardBody";
+
 import employees from "../employees.json";
 
 class EmployeeContainer extends Component {
@@ -11,18 +13,25 @@ class EmployeeContainer extends Component {
     employees,
     filters: {
       currentlyEmployed: true,
-      department: "Engineering",
-      title: 'Senior Developer',
+      department: "Quality Control",
+      title: "QC Analyst",
     }
   };
 
-  // currentlyEmployed = x => {
-  //   if (!this.props.filters.currentlyEmployed) {
-  //     console.log(this.props.filters.currentlyEmployed)
-  //     // const employees = this.state.employees.filter(employee => employee.currentlyEmployed === true)
-  //     // this.setState({ employees });
-  //   }
-  // }
+    handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+    
+  };
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    alert('Button push')
+  };
 
   //render base component
   render() {
@@ -38,7 +47,11 @@ class EmployeeContainer extends Component {
             </Card>
           </Col>
           <Col size="md-6">
-            <Card heading="Filters"></Card>
+            <Card heading="Filters">
+              <FiltersCardBody 
+              handleFormSubmit={this.handleFormSubmit}
+              />
+            </Card>
           </Col>
         </Row>
       </Container>
