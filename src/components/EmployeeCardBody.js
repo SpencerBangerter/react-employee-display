@@ -9,9 +9,8 @@ function EmployeeCard(props) {
     renderedEmployees = renderedEmployees.filter(employee => employee.department === props.filters.department);
   }
   if (props.filters.title) {
-    renderedEmployees = renderedEmployees.filter(employee => employee.title === props.filters.title);
+    renderedEmployees = renderedEmployees.filter(employee => employee.title.toLowerCase().includes(props.filters.title.toLowerCase()));
   }
-  console.log(renderedEmployees)
   return (
     <div>
       {renderedEmployees.map(employee => (

@@ -6,28 +6,43 @@ function Filters(props) {
       <form className="form">
         <div className="form-group">
           <label htmlFor="departmentFilter">Department</label>
-          <select className="form-control" id="departmentFilter" onChange={props.handleInputChange}>
+          <select
+            className="form-control"
+            id="departmentFilter"
+            onChange={props.handleInputChange}
+            name="department"
+            value={props.department}
+            >
             <option></option>
-            <option>Engineering</option>
-            <option>Quality Control</option>
-            <option>CDC</option>
+            <option value="Engineering" >Engineering</option>
+            <option value="Quality Control">Quality Control</option>
+            <option value="CDC">CDC</option>
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="titleFilter">Title</label>
-          <input onChange={props.handleInputChange} className="form-control" type="text" id="titleFilter" />
+          <label htmlFor="title">Title</label>
+          <input
+          onChange={props.handleInputChange}
+          value={props.title}
+          name="title"
+          type="text"
+          className="form-control"
+          placeholder="Enter a title"
+          id="title"
+          />
         </div>
         <div className="form-check">
           <input
             type="checkbox"
             className="form-check-input"
-            id="employmentFilter"
-            onChange={props.handleInputChange}
+            id="currentlyEmployed"
+            name="currentlyEmployed"
+            checked={props.currentlyEmployed}
+            onChange={props.handleCheckboxUpdate}
           />
-          <label htmlFor="employmentFilter">Currently Employed</label>
+          <label htmlFor="currentlyEmployed">Currently Employed</label>
         </div>
 
-        <button onClick={props.handleFormSubmit}>Apply Filters</button>
       </form>
     </div>
   );

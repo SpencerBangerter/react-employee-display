@@ -3,35 +3,32 @@ import Container from "./Container";
 import Row from "./Row";
 import Col from "./Col";
 import Card from "./Card";
-import EmployeeCardBody from "./EmployeeCardBody";
+import EmployeeCardBody from "./EmployeeCardBody";ft
 import FiltersCardBody from "./FiltersCardBody";
 
 import employees from "../employees.json";
 
 class EmployeeContainer extends Component {
   state = {
-    employees,
-    filters: {
-      currentlyEmployed: true,
-      department: "Quality Control",
-      title: "QC Analyst",
-    }
+    currentlyEmployed: true,
+    department: "",
+    title: "",
   };
 
-    handleInputChange = event => {
+  handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
       [name]: value
     });
-    
   };
 
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    alert('Button push')
-  };
+  handleCheckboxUpdate = event => {
+    const name = event.target.name;
+    const value = event.target.checked;
+    this.setState({
+      [name]: value
+  })};
 
   //render base component
   render() {
@@ -42,14 +39,18 @@ class EmployeeContainer extends Component {
             <Card heading="Employees">
               <EmployeeCardBody 
               employees = {employees}
-              filters = {this.state.filters}
+              filters = {this.state}
               />
             </Card>
           </Col>
           <Col size="md-6">
             <Card heading="Filters">
               <FiltersCardBody 
-              handleFormSubmit={this.handleFormSubmit}
+              title={this.state.title}
+              currentlyEmployed={this.state.currentlyEmployed}
+              department={this.state.department}
+              handleInputChange={this.handleInputChange}
+              handleCheckboxUpdate={this.handleCheckboxUpdate}
               />
             </Card>
           </Col>
